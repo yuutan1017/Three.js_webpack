@@ -10,9 +10,9 @@
     "sourceMap": true,
     "inlineSources": true,
     "outDir": "./dist/",
-    "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "noImplicitAny": true,
   }
 }
