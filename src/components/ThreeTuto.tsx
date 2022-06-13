@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
 import { config, useSpring, animated } from "@react-spring/three";
 
-import "./style.css";
+import "../css/style.css";
 
 const Box = (props: any) => {
   const ref = useRef<Mesh>(null!);
@@ -36,14 +37,16 @@ export const ThreeTuto = () => {
   return (
     <>
       <div id="canvas-container">
+        <h1>Three.js Fiver</h1>
+        <Link to="/">Home</Link>
         <Canvas>
-          <Box position={[-2, 0.7, 0]} />
+          <Box position={[-3, 1.5, 1]} />
           <Box position={[2, -0.7, 0]} />
+          <Box position={[2, 2, 0]} />
           <spotLight position={[10, 10, 10]} angle={0.2} penumbra={1} />
           <pointLight position={[-10, -10, -10]} />
         </Canvas>
       </div>
-      <h1>Three.js Fiver</h1>
     </>
   );
 };

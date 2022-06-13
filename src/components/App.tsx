@@ -6,6 +6,8 @@ export const App: React.FC = () => {
     <>
       <h1>Hello Three.js</h1>
       <Link to="/ThreeTuto">Three.js tutorial</Link>
+      <br />
+      <Link to="/fetchData">FetchData</Link>
     </>
   );
 };
