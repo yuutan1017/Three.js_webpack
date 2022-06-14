@@ -1,8 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, { useMemo,useRef, useState } from "react";
 import { Link } from "react-router-dom";
+
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Mesh } from "three";
+import { Mesh, PlaneBufferGeometry } from "three";
 import { config, useSpring, animated } from "@react-spring/three";
+//
+import { OrbitControls } from '@react-three/drei/core/OrbitControls';
+import { vertexShader, fragmentShader } from './shader';
 
 import "../css/style.css";
 
@@ -40,9 +44,8 @@ export const ThreeTuto = () => {
         <h1>Three.js Fiver</h1>
         <Link to="/">Home</Link>
         <Canvas>
-          <Box position={[-3, 1.5, 1]} />
-          <Box position={[2, -0.7, 0]} />
           <Box position={[2, 2, 0]} />
+          <Box position={[-2, 2, 0]} />
           <spotLight position={[10, 10, 10]} angle={0.2} penumbra={1} />
           <pointLight position={[-10, -10, -10]} />
         </Canvas>
